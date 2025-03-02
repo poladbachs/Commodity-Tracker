@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import plotly.graph_objects as go
 from prophet import Prophet
-
 from data_fetcher import fetch_commodity_price
 from data_process import compute_effective_prices
 from news_api import get_news_headlines
@@ -83,15 +82,13 @@ def main():
 
     st.markdown("<h1 class='main-title'>Commodity Logistics & Price Tracker</h1>", unsafe_allow_html=True)
 
-    # Dictionary of commodities and corresponding tickers
     commodities = {
-        "Crude Oil": "CL=F",   # WTI Crude Oil
-        "Gold": "GC=F",       # Gold Futures
-        "Copper": "HG=F",     # Copper Futures
-        "Silver": "SI=F",     # Silver Futures
+        "Crude Oil": "CL=F",
+        "Gold": "GC=F",
+        "Copper": "HG=F",
+        "Silver": "SI=F",
         "Steel": "SLX"
     }
-
     news_search_terms = {
         "Crude Oil": "Crude Oil OPEC",
         "Gold": "Gold precious metals",
