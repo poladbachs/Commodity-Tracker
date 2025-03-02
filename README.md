@@ -2,7 +2,7 @@
 # Commodity Logistics & Price Tracker
 
 ## Overview
-Commodity Logistics & Price Tracker is a demo tool for commodity trading firms. It delivers real-time analysis of commodity prices, simulated freight costs, effective price computation with the best shipping route, and live news integration—all in an interactive, modern dashboard.
+Commodity Logistics & Price Tracker is a high-performance demo tool for commodity trading firms. It provides real-time analysis of commodity prices, simulated freight costs, route logistics, effective price computation, and live news integration—all in one interactive dashboard.
 
 ---
 
@@ -11,8 +11,8 @@ Commodity Logistics & Price Tracker is a demo tool for commodity trading firms. 
 
 ---
 
-## 🔥 Key Features
-- **Real-Time Price Data:** Retrieves historical prices for energy and metals using Yahoo Finance (yfinance).
+## 📌 How It Works
+- **Real-Time Price Data:** Retrieves historical prices for energy and metals using Yahoo Finance.
 - **Simulated Freight Cost:** Generates realistic freight cost data with an adjustable factor.
 - **Effective Price Analysis:** Combines commodity prices with freight costs to determine optimal shipping routes.
 - **Price Forecasting:** Predicts future prices (next 7 days) using Facebook Prophet model.
@@ -52,5 +52,5 @@ Customize commodity tickers in dashboard.py if needed.
 ## Running the Project
 ```bash
 # Launch the Streamlit dashboard
-streamlit run src/dashboard.py
+streamlit run dashboard.py
 ```
