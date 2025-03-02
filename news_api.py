@@ -20,11 +20,18 @@ def get_news_headlines(commodity):
         results = []
         for art in articles:
             title = art.get("title", "No Title")
-            link = art.get("url", "#")
-            results.append({"title": title, "url": link})
+            url_link = art.get("url", "#")
+            source = art.get("source", {}).get("name", "Unknown Source")
+            snippet = art.get("description", "")
+            results.append({
+                "title": title,
+                "url": url_link,
+                "source": source,
+                "snippet": snippet
+            })
         return results
     except Exception as e:
-        return [{"title": f"Error fetching news: {e}", "url": "#"}]
+        return [{"title": f"Error fetching news: {e}", "url": "#", "source": "Error", "snippet": ""}]
 
 if __name__ == "__main__":
     headlines = get_news_headlines("Crude Oil [Energy]")
