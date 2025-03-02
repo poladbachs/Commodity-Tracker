@@ -17,10 +17,14 @@ def get_news_headlines(commodity):
         response.raise_for_status()
         data = response.json()
         articles = data.get("articles", [])
-        headlines = [article["title"] for article in articles]
-        return headlines
+        results = []
+        for art in articles:
+            title = art.get("title", "No Title")
+            link = art.get("url", "#")
+            results.append({"title": title, "url": link})
+        return results
     except Exception as e:
-        return [f"Error fetching news: {e}"]
+        return [{"title": f"Error fetching news: {e}", "url": "#"}]
 
 if __name__ == "__main__":
     headlines = get_news_headlines("Crude Oil [Energy]")
