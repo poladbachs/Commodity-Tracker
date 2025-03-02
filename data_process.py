@@ -15,7 +15,7 @@ def compute_effective_prices(price_data, routes):
     if price_data.empty or 'Close' not in price_data.columns:
         raise ValueError("Invalid price data; must include a 'Close' column.")
         
-    latest_price = price_data['Close'].iloc[-1]
+    latest_price = price_data['Close'].iloc[-1].item()
     results = []
     for route in routes:
         freight_info = fetch_freight_cost(route)
