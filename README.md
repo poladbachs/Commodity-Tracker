@@ -36,8 +36,8 @@ Commodity Logistics & Price Tracker is a high-performance demo tool for commodit
 
 ```bash
 # Clone the repository
-git clone https://github.com/YourUsername/commodities_tracker.git
-cd commodities_tracker
+git clone https://github.com/YourUsername/commodity-tracker.git
+cd commodity-tracker
 
 # Install dependencies
 pip install -r requirements.txt
